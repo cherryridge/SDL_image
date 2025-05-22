@@ -438,7 +438,7 @@ if(SDLIMAGE_ZLIB)
         set(ZLIB_LIBRARIES "${ZLIB_LIBRARY}")
         # ZLIB_INCLUDE_DIRS variable is used by vendored libpng
         set(ZLIB_INCLUDE_DIRS "${ZLIB_INCLUDE_DIR}")
-        target_include_directories(${ZLIB_LIBRARY} INTERFACE $<BUILD_INTERFACE:${ZLIB_INCLUDE_DIRS}>)
+        #target_include_directories(${ZLIB_LIBRARY} INTERFACE $<BUILD_INTERFACE:${ZLIB_INCLUDE_DIRS}>)
         if(SDLIMAGE_ZLIB_SHARED OR NOT SDLIMAGE_BUILD_SHARED_LIBS)
             list(APPEND INSTALL_EXTRA_TARGETS ${ZLIB_LIBRARY})
         endif()
